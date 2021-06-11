@@ -1,0 +1,38 @@
+{
+  "name": "clypeus",
+  "version": "1.0.0",
+  "description": "Authentication server",
+  "main": "server.js",
+  "scripts": {
+    "build": "node server.js",
+    "dev": "set DEBUG=server:debug && set NODE_ENV=development && nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hreeves19/clypeus.git"
+  },
+  "keywords": [
+    "Express.js",
+    "JWT",
+    "Authenticate"
+  ],
+  "author": "Court Reeves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hreeves19/clypeus/issues"
+  },
+  "homepage": "https://github.com/hreeves19/clypeus#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.13"
+  },
+  "devDependencies": {
+    "debug": "^4.3.1",
+    "mocha": "^9.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
