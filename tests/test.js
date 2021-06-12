@@ -3,13 +3,11 @@ require('dotenv').config();
 let server = require('../src/server');
 
 describe('Server', ()=> {
-    let serverPort = undefined;
-
     beforeEach(() => {
-        serverPort = process.env.SERVER_PORT;
+        server.SERVER_PORT = process.env.SERVER_PORT;
     });
 
     it('should run server on port defined in .env', async() => {
-        expect(serverPort).to.equal(process.env.SERVER_PORT);
+        expect(server.SERVER_PORT).to.equal(process.env.SERVER_PORT);
     })
 });
