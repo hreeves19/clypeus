@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node src/server.js",
     "dev": "set DEBUG=server:debug && set NODE_ENV=development && nodemon src/server.js",
-    "test": "set DEBUG=server:debug && set NODE_ENV=test && mocha --reporter spec --exit tests/"
+    "test": "set DEBUG=server:debug && set NODE_ENV=test && mocha --reporter spec --exit tests/",
+    "test:watch": "set DEBUG=server:debug && set NODE_ENV=test && nodemon --exec \"mocha --reporter spec --exit tests\"/"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,15 @@
   },
   "homepage": "https://github.com/hreeves19/clypeus#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "mongoose": "^5.12.13"
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.13",
+    "underscore": "^1.13.1"
   },
   "devDependencies": {
     "chai": "^4.3.4",
