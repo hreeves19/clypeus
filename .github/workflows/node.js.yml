@@ -11,7 +11,13 @@ on:
 
 jobs:
   build:
-
+    env:
+      DB_CLUSTER_NAME: ${{ secrets.DB_CLUSTER_NAME }}
+      DB_NAME: ${{ secrets.DB_NAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      DB_USER: ${{ secrets.DB_USER }}
+      HOST_NAME: ${{ secrets.HOST_NAME }}
+      SERVER_PORT: ${{ secrets.SERVER_PORT }}
     runs-on: ubuntu-latest
 
     strategy:

@@ -58,8 +58,8 @@ describe('API Register', ()=> {
             let users = await User.find({ email: newUser.email });
             newUsers = newUsers.concat(newUsers, users);
 
-            expect(responseWithNewUser.status).to.equal(200);
-            expect(responseWithFakeUser.status).to.equal(500);
+            expect(responseWithNewUser.status, 'This should have responded with status 200, user should have been added to database').to.equal(200);
+            expect(responseWithFakeUser.status, 'An internal server error should have been thrown').to.equal(500);
             expect(users.length).to.equal(1, `Should only have one user with this email: ${newUser.email}`);
         });
     });
