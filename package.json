@@ -7,7 +7,7 @@
     "build": "node src/server.js",
     "dev": "set DEBUG=server:debug && set NODE_ENV=development && nodemon src/server.js",
     "test": "set DEBUG=server:debug && set NODE_ENV=test && mocha --reporter spec --exit --timeout 10000 tests/",
-    "test:watch": "set DEBUG=server:debug && set NODE_ENV=test && nodemon --exec \"mocha --reporter spec --exit tests\"/"
+    "test:watch": "set DEBUG=server:debug && set NODE_ENV=test && nodemon --exec \"mocha --reporter spec --exit --timeout 10000 tests\"/"
   },
   "repository": {
     "type": "git",
